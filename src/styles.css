@@ -2,3 +2,19 @@
 .rkm_container{
   margin-top: 5em;
 }
+
+.rkm_title{
+  font-family: 'Philosopher', cursive;
+  font-size: 2.25em;
+  color: navy;
+}
+
+.rkm_section_container{
+  margin-left: 3em;
+}
+
+.rkm_favorites{
+  font-family: 'Quattrocento', sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+}

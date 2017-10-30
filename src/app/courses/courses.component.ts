@@ -7,7 +7,7 @@ import {CoursesService} from "../services/courses.service";
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-  title: string = "List of Courses";
+  title: string = "Favorite Courses";
   courses: any[];
 
   constructor(private _courses:CoursesService) { }

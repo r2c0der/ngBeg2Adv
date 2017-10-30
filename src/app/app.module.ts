@@ -5,20 +5,24 @@ import { AppComponent } from './app.component';
 import { RKMB2AIndexComponent } from './rkmb2a-index/rkmb2a-index.component';
 import { RKMB2ANavbarComponent } from './ui/rkmb2a-navbar/rkmb2a-navbar.component';
 import { CoursesComponent } from './courses/courses.component';
-import {CoursesService } from './services/courses.service';
+import { CoursesService } from './services/courses.service';
+import { AuthorsService} from "./services/authors.service";
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RKMB2AIndexComponent,
     RKMB2ANavbarComponent,
-    CoursesComponent
+    CoursesComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    AuthorsService
   ],
   bootstrap: [RKMB2AIndexComponent]
 })

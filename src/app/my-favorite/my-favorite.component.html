@@ -1,0 +1,9 @@
+<section class="rkm_section_container">
+  <h2 class="rkm_title">Favorite Colors</h2>
+  <div class="rkm_favorites">
+    <ul class="list-group" *ngFor="let color of colors">
+      <li class="list-group-item" [class.favorite]="isFavorite">{{color}} </li>
+    </ul>
+  </div>
+</section>
+

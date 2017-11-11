@@ -8,6 +8,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursesService } from './services/courses.service';
 import { AuthorsService} from "./services/authors.service";
 import { AuthorsComponent } from './authors/authors.component';
+import { MyFavoriteComponent } from './my-favorite/my-favorite.component';
+import { FavoritePipe } from './pipes/favorite.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AuthorsComponent } from './authors/authors.component';
     RKMB2AIndexComponent,
     RKMB2ANavbarComponent,
     CoursesComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    MyFavoriteComponent,
+    FavoritePipe
   ],
   imports: [
     BrowserModule

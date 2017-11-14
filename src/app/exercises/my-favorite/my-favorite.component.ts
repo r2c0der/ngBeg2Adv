@@ -9,7 +9,7 @@ export class MyFavoriteComponent implements OnInit {
 
   isFavorite = false;
 
-  colors =[
+  colors = [
     "purple",
     "orange",
     "yellow",
@@ -26,5 +26,5 @@ export class MyFavoriteComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
 }

@@ -23,7 +23,12 @@
         <a class="navbar-brand " href="#">rkmNGBeg2Adv</a>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li ><a [routerLink]="['home']" routerLinkActive="active" style="cursor:pointer;">Home</a></li>
+            <span>&nbsp; | &nbsp;</span>
+            <li>Exercises</li>
+            <li><a routerLink="authors" routerLinkActive="active" style="cursor:pointer;">Authors</a></li>
+            <li><a routerLink="courses" routerLinkActive="active" style="cursor:pointer;">Courses</a></li>
+            <li><a routerLink="post-likes" routerLinkActive="active" style="cursor:pointer;">Post Likes</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

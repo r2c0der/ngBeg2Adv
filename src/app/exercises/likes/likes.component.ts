@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LikesComponent implements OnInit {
 
-  constructor() { }
+  isLiked: boolean = false;
+  numberOfLikes: number = 0;
+
+  
+
+  constructor(likes?:number) {
+    this.likeCount = likes;
+
+  }
 
   ngOnInit() {
   }
 
+  updateLikeCount(){
+    this.numberOfLikes++;
+    this.isLiked = !this.isLiked;
+  }
+
+  set likeCount(value){
+    this.numberOfLikes = value;
+  }
 }

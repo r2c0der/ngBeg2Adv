@@ -1,6 +1,6 @@
 .rkm_navbar_top{
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 1rem;
+  padding-bottom: .25rem;
 }
 
 
@@ -13,6 +13,25 @@
   padding-left: 11em;
 }
 
-.rkm_navbar_right-text{
+.rkm_navbar_tagline{
+  margin-top: 1.75em;
+  color:lime;
+  font-size: 1.5em;
   font-family:'Pacifico', sans-serif;
+}
+
+.rkm_navbar_nav-right{
+  margin-right: 3em;
+}
+.rkm_navbar_section-link{
+  color: #ffffff;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.5em;
+}
+
+.rkm_navbar_link-header{
+
+}
+.rkm_navbar_link{
+  font-size: 1.12em;
 }

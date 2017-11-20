@@ -3,15 +3,13 @@
 <nav class="navbar navbar-inverse navbar-fixed-top rkm_navbar_top">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-2 col-sm-12">
+      <div class="col-lg-2 col-md-2 col-sm-5">
         <img src="../../../assets/images/rkm_signet_eurostar_whtltr.svg" class="img-responsive rkm_signet" alt="RKM Signet"/>
-
       </div>
-      <div class="col-md-3">
-        <a class="navbar-brand navbar-right rkm_navbar_right-text" href="#">More Learning &amp; Having Fun!</a>
-
+      <div class="col-lg-4 col-md-4 col-sm-6 col-md-pull-1">
+        <a class="navbar-brand navbar-right rkm_navbar_tagline" href="#">More Learning &amp; Having Fun!</a>
       </div>
-      <div class="col-md-4 col-md-push-4">
+      <div class="col-md-4 col-md-push-2 ">
         <div class="navbar-header rkm_navbar_header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -20,16 +18,17 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <a class="navbar-brand " href="#">rkmNGBeg2Adv</a>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li ><a [routerLink]="['home']" routerLinkActive="active" style="cursor:pointer;">Home</a></li>
-            <span>&nbsp; | &nbsp;</span>
-            <li>Exercises</li>
-            <li><a routerLink="authors" routerLinkActive="active" style="cursor:pointer;">Authors</a></li>
-            <li><a routerLink="courses" routerLinkActive="active" style="cursor:pointer;">Courses</a></li>
-            <li><a routerLink="post-likes" routerLinkActive="active" style="cursor:pointer;">Post Likes</a></li>
-          </ul>
+
+        <div id="navbar" class="navbar-collapse collapse ">
+          <a class="navbar-brand " href="#" ngClass="rkm_navbar_section-link">rkmNGBeg2Adv</a>
+          <br />
+            <ul class="nav navbar-nav ">
+              <li class="rkm_navbar_link active" ><a routerLink="/home" style="cursor:pointer;" routerLinkActive="active">Home</a>
+              </li>
+              <li class="rkm_navbar_link"><a routerLink="/authors" routerLinkActive="active"  style="cursor:pointer;">Authors</a></li>
+              <li class="rkm_navbar_link"><a routerLink="/courses" routerLinkActive="active"  style="cursor:pointer;">Courses</a></li>
+              <li class="rkm_navbar_link"><a routerLink="/likes" routerLinkActive="active"  style="cursor:pointer;">Post Likes</a></li>
+            </ul>
         </div><!--/.nav-collapse -->
       </div>
 

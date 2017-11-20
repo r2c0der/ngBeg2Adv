@@ -1,9 +1,30 @@
 <app-rkmb2a-navbar></app-rkmb2a-navbar>
-<div class="container-fluid rkm_container">
+<div class="container-fluid ">
   <div class="row">
-    <div class="col-md-6">
+    <div class=" col-lg-5 col-md-5 col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <h2 class="panel-title">Postable Notes</h2>
+          <div class="panel-body">
 
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="basic-addon1">#</span>
+              <input #currentCount type="text" class="form-control" placeholder="Like Count" (keyup)="setCount(currentCount.value)" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <h4> Start Like Count: {{startCount}}</h4>
+            <h4> New Like Count: {{newCount}}</h4>
+            <h4> Button State: {{buttonState}}</h4>
+            <br />
+            <button class="btn-lg btn-default rkm_btn_likes"
+                    (click)="updateLikes()">
+              <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
 
-    </div>
-  </div>
-</div>
+      </div> <!-- .\ PANEL -->
+
+    </div> <!--  COL -->
+  </div> <!--  ROW -->
+  </div> <!-- CONTAINER  -->

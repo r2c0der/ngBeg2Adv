@@ -5,27 +5,40 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './likes.component.html',
   styleUrls: ['./likes.component.css']
 })
+
 export class LikesComponent implements OnInit {
+  btnClicked: boolean = false;
+private _newCount: number;
+private _startCount: number;
+private _buttonState: string = "Off";
 
-  isLiked: boolean = false;
-  numberOfLikes: number = 0;
 
-  
 
-  constructor(likes?:number) {
-    this.likeCount = likes;
 
-  }
+  constructor(){}
 
   ngOnInit() {
   }
 
-  updateLikeCount(){
-    this.numberOfLikes++;
-    this.isLiked = !this.isLiked;
+  private setCount(value){
+    this._startCount = value;
+    this._newCount = this._startCount;
   }
 
-  set likeCount(value){
-    this.numberOfLikes = value;
+  updateLikes(){
+
+   if(this.btnClicked) {
+      this._buttonState = "On"
+      this._newCount++;
+    } else {
+      this._buttonState = "Off";
+      this._newCount--;
+    }
+
+
+    this.btnClicked = !this.btnClicked;
+
   }
+
+
 }

@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class LikesComponent implements OnInit {
   btnClicked: boolean = false;
-private _newCount: number;
-private _startCount: number;
-private _buttonState: string = "Off";
+private newCount: number;
+private startCount: number;
+private buttonState: string = "Off";
 
 
 
@@ -21,18 +21,18 @@ private _buttonState: string = "Off";
   }
 
   private setCount(value){
-    this._startCount = value;
-    this._newCount = this._startCount;
+    this.startCount = value;
+    this.newCount = +this.startCount;
   }
 
   updateLikes(){
 
    if(this.btnClicked) {
-      this._buttonState = "On"
-      this._newCount++;
+      this.buttonState = "On"
+      this.newCount++;
     } else {
-      this._buttonState = "Off";
-      this._newCount--;
+      this.buttonState = "Off";
+      this.newCount--;
     }
 
 

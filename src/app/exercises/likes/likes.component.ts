@@ -25,7 +25,9 @@ private buttonState: string = "Off";
     this.newCount = +this.startCount;
   }
 
-  updateLikes(){
+  updateLikes(count){
+
+    this.setCount(count);
 
    if(this.btnClicked) {
       this.buttonState = "On"

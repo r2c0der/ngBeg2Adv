@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as _ from 'lodash';
-import {elementDef} from "@angular/core/src/view";
+
 
 @Component({
   selector: 'rkm-my-favorite',

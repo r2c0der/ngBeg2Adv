@@ -14,6 +14,7 @@ import { FavoritePipe } from './pipes/favorite.pipe';
 import { LikesComponent } from './exercises/likes/likes.component';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { rkmngRoutes} from "./RKMRoutes";
+import { HomeComponent } from './ui/home/home.component';
 
 
 
@@ -26,7 +27,8 @@ import { rkmngRoutes} from "./RKMRoutes";
     AuthorsComponent,
     MyFavoriteComponent,
     FavoritePipe,
-    LikesComponent
+    LikesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

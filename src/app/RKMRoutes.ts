@@ -9,7 +9,7 @@ import {RKMB2AIndexComponent} from "./rkmb2a-index/rkmb2a-index.component";
 
 export const rkmngRoutes: Routes = [
   { path: 'home', component: RKMB2AIndexComponent },
-  { path: 'likes', component: LikesComponent },
+  { path: 'section-4', component: LikesComponent },
   { path: 'authors', component: AuthorsComponent },
   { path: 'courses', component: CoursesComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full'}

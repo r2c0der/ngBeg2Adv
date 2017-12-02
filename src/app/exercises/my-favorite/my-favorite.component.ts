@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'lodash';
+import {elementDef} from "@angular/core/src/view";
 
 @Component({
   selector: 'rkm-my-favorite',
@@ -7,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyFavoriteComponent implements OnInit {
 
-  isFavorite = false;
+  isFavorite: boolean;
 
   colors = [
     "purple",
     "orange",
     "yellow",
     "brown",
-    "hot pink",
+    "hotpink",
     "black",
     "green",
     "red"
@@ -24,6 +26,14 @@ export class MyFavoriteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  favoriteSelected(){
+
+       this.isFavorite = !this.isFavorite;
+
+
   }
 
 

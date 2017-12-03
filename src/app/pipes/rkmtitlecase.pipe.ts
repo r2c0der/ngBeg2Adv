@@ -30,23 +30,37 @@ export class RkMTitleCasePipe implements PipeTransform {
    *
    */
 
-  excludeWords = [
-    'a', 'an', 'the', 'and', 'but', 'for', 'at', 'by', 'from', 'of' ]
 
 
-  transform(value: string, args?: any): string {
-    if (!value) return value;
-    let searchWord = _.lowerCase(value);
-    let isFound: any = _.find(this.excludeWords, searchWord);
 
-    console.log("Search excludeWords is: ", isFound);
+  transform(value: string): string {
+    if (!value) return null;
+    let words = value.split(' ');
+
+    for(var idx = 0; idx < words.length; idx++){
+      let word = words[idx];
+
+      if(idx > 0 && this.isPreposition(word))
+        words[idx] = words[idx].toLowerCase();
+       else
+       words[idx] =  this.toTitleCase(word);
+
+    }
+
+    return words.join(' ');
 
   }
 
+  private isPreposition(word: string): boolean{
+    let   prepositions = [ 'a', 'an', 'the', 'and', 'but', 'for', 'at', 'by', 'from', 'of', 'in', 'nor', 'etc', 'on' ];
 
-}
+    //console.log("Using lodash: ", _.includes(prepositions, word.toLowerCase()));
+    //console.log("Using includes: ", prepositions.includes(word.toLowerCase()));
+     return _.includes(prepositions, word.toLowerCase());
+  }
 
-function titleCaseWord(word: string) {
-  if (!word) return word;
-  return word[0].toUpperCase() + word.substr(1).toLowerCase();
+  private toTitleCase(word: string): string {
+   return word.substr(0, 1).toUpperCase() + word.substr(1).toLowerCase();
+  }
+
 }

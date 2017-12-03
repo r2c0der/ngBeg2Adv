@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleCasingComponent implements OnInit {
 
+  title: string;
+
   constructor() { }
 
   ngOnInit() {

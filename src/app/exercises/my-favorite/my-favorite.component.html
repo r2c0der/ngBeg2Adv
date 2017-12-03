@@ -1,13 +1,13 @@
 <section class="rkm_section_container">
   <h2 class="rkm_title">Favorite Colors</h2>
   <div class="rkm_favorites">
-    <ul class="list-group" *ngFor="let color of colors">
+    <ul class="list-group" *ngFor="let color of colors; let idx = index">
       <li class="list-group-item" style="cursor: pointer;"
-          (click)="favoriteSelected()">
-        <span [style.backgroundColor]="color" id="colorbox">&nbsp;</span>
-        {{color}}
+          (click)="favoriteSelected(idx)">
+        <span [style.backgroundColor]="color.colorName" id="colorbox">&nbsp;</span>
+        {{color.colorName}}
 
-        <span *ngIf="isFavorite; else notFavorite">
+        <span *ngIf="color.isFavorite; else notFavorite">
       <i class="fa fa-star" aria-hidden="true"></i>
         </span>
         <ng-template #notFavorite>

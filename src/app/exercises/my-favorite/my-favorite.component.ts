@@ -10,16 +10,27 @@ export class MyFavoriteComponent implements OnInit {
 
   isFavorite: boolean;
 
+
   colors = [
-    "purple",
-    "orange",
-    "yellow",
-    "brown",
-    "hotpink",
-    "black",
-    "green",
-    "red"
-  ]
+    {colorName: "purple",
+      isFavorite: false },
+    {colorName: "orange",
+      isFavorite: false},
+    {colorName: "yellow",
+      isFavorite: false},
+    {colorName: "brown",
+      isFavorite: false},
+    {colorName: "hotpink",
+      isFavorite: false},
+    {colorName: "black",
+      isFavorite: false},
+    {colorName: "green",
+      isFavorite: false},
+    {colorName: "red",
+      isFavorite: false}
+
+  ];
+
 
 
   constructor() { }
@@ -28,9 +39,10 @@ export class MyFavoriteComponent implements OnInit {
   }
 
 
-  favoriteSelected(){
 
-       this.isFavorite = !this.isFavorite;
+  favoriteSelected(index: number){
+    //console.log("Color selected by index: ", this.colors[index]);
+     this.colors[index].isFavorite = !this.colors[index].isFavorite;
 
 
   }

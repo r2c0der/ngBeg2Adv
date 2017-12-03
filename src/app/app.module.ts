@@ -10,10 +10,12 @@ import { CoursesService } from './services/courses.service';
 import { AuthorsService} from "./services/authors.service";
 import { AuthorsComponent } from './exercises/authors/authors.component';
 import { MyFavoriteComponent } from './exercises/my-favorite/my-favorite.component';
-import { FavoritePipe } from './pipes/favorite.pipe';
 import { LikesComponent } from './exercises/likes/likes.component';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { rkmngRoutes} from "./RKMRoutes";
+import { HomeComponent } from './ui/home/home.component';
+import { TitleCasingComponent } from './exercises/title-casing/title-casing.component';
+import { RkMTitleCasePipe } from './pipes/rkmtitlecase.pipe';
 
 
 
@@ -25,8 +27,10 @@ import { rkmngRoutes} from "./RKMRoutes";
     CoursesComponent,
     AuthorsComponent,
     MyFavoriteComponent,
-    FavoritePipe,
-    LikesComponent
+    LikesComponent,
+    HomeComponent,
+    TitleCasingComponent,
+    RkMTitleCasePipe
   ],
   imports: [
     BrowserModule,

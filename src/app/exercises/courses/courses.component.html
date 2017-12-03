@@ -6,8 +6,8 @@
     <div class="card-body">
       <ul class="list-group list-group-flush rkm_course_list-items">
         <li class="list-group-item"><strong>Number of Students:</strong> {{course.students | number}}</li>
-        <li class="list-group-item"><strong>Price: </strong>{{course.price}}</li>
-        <li class="list-group-item"><strong>Release Date: </strong>{{course.releaseDate}}</li>
+        <li class="list-group-item"><strong>Price: </strong>{{course.price | currency:'USD':'symbol'}} </li>
+        <li class="list-group-item"><strong>Release Date: </strong>{{course.releaseDate | date:'mediumDate'}}</li>
         <li class="list-group-item"><strong>Course rating: </strong>{{course.rating | number: '1.1-1'}}
           <i class="fa fa-star-o fa-1x" aria-hidden="true"></i>
           <i class="fa fa-star-o fa-1x" aria-hidden="true"></i>

@@ -1,19 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-.rkm_navbar_top{
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
 .rkm_container{
-  margin-top: 5em;
+  margin-top: 11em;
 }
 
-.rkm_signet{
-  position: relative;
-  top: .3em;
-  
-}
-.rkm_navbar_header {
-  padding-left: 11em;
+.rkm_title{
+  font-family: 'Philosopher', cursive;
+  font-size: 2.25em;
+  color: navy;
 }
 
+.rkm_section_container{
+  margin-left: 3em;
+}
+
+.rkm_favorites{
+  font-family: 'Quattrocento', sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+}

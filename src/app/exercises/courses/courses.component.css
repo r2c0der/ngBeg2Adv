@@ -1,0 +1,36 @@
+
+
+.rkm_courses {
+  font-family:'Berkshire Swash', sans-serif;
+  color:hotpink;
+}
+
+.fa-star-o{
+  color: black;
+}
+
+.fa-star-o:hover{
+  color: gold;
+  font-weight: 600;
+}
+
+.list-group-item{
+  border: none;
+}
+
+.rkm_course_list{
+  font-family: 'Wendy One ', sans-serif;
+  font-size: 1.15em;
+  top: -5%;
+  margin-left: 3em;
+
+}
+
+.rkm_course_list-title{
+  font-family: 'Germania One', serif;
+  color: #dd0000;
+  font-size: 1.55em;
+}
+.rkm_course_list-items{
+  line-height: 25%;
+}

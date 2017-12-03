@@ -1,10 +1,16 @@
 <div class="row">
-  <div class="col-md-6">
-    <div class="input-group input-group-lg">
-      <span class="input-group-addon" id="title">text</span>
-      <input [(ngModel)]="title" type="text" class="form-control" placeholder="Enter your title" aria-describedby="title">
-    </div>
+  <div class="col-md-8">
+    <form>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="title">text</span>
+        <input [(ngModel)]="title" type="text" name="title" class="form-control" placeholder="Enter your title" aria-describedby="title" />
+      </div>
+      <br />
+        <button class="btn btn-lg btn-success" type="reset" >Clear Text</button>
+    </form>
+    <br />
     <h4>  {{ title | rkmtitlecase }}</h4>
+
   </div>
 
 </div>

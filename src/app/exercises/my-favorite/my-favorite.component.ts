@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyFavoriteComponent implements OnInit {
 
-  isFavorite = false;
+  isFavorite: boolean;
 
 
   colors = [
@@ -32,6 +32,7 @@ export class MyFavoriteComponent implements OnInit {
   ];
 
 
+
   constructor() { }
 
   ngOnInit() {
@@ -42,6 +43,7 @@ export class MyFavoriteComponent implements OnInit {
   favoriteSelected(index: number){
     //console.log("Color selected by index: ", this.colors[index]);
      this.colors[index].isFavorite = !this.colors[index].isFavorite;
+
 
   }
 

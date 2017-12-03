@@ -54,8 +54,6 @@ export class RkMTitleCasePipe implements PipeTransform {
   private isPreposition(word: string): boolean{
     let   prepositions = [ 'a', 'an', 'the', 'and', 'but', 'for', 'at', 'by', 'from', 'of', 'in', 'nor', 'etc', 'on' ];
 
-    //console.log("Using lodash: ", _.includes(prepositions, word.toLowerCase()));
-    //console.log("Using includes: ", prepositions.includes(word.toLowerCase()));
      return _.includes(prepositions, word.toLowerCase());
   }
 

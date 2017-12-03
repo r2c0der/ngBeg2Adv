@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as _ from 'lodash';
 
 @Component({
   selector: 'rkm-my-favorite',
@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyFavoriteComponent implements OnInit {
 
-  isFavorite: boolean;
 
 
   colors = [
@@ -28,6 +27,7 @@ export class MyFavoriteComponent implements OnInit {
       isFavorite: false},
     {colorName: "red",
       isFavorite: false}
+
 
   ];
 

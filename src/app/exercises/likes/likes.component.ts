@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-likes',
+  selector: 'rkm-likes',
   templateUrl: './likes.component.html',
   styleUrls: ['./likes.component.css']
 })
@@ -12,6 +12,11 @@ private newCount: number;
 private startCount: number;
 private buttonState: string = "Off";
 
+post = {
+  body: 'Somebody likes this',
+  isLiked: false,
+  postLikeCount: 0
+}
 
 
 
@@ -24,6 +29,8 @@ private buttonState: string = "Off";
     this.startCount = value;
     this.newCount = +this.startCount;
   }
+
+
 
   updateLikes(count){
 

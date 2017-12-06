@@ -16,6 +16,7 @@ import { rkmngRoutes} from "./RKMRoutes";
 import { HomeComponent } from './ui/home/home.component';
 import { TitleCasingComponent } from './exercises/title-casing/title-casing.component';
 import { RkMTitleCasePipe } from './pipes/rkmtitlecase.pipe';
+import { Likes2Component } from './exercises/likes2/likes2.component';
 
 
 
@@ -30,7 +31,8 @@ import { RkMTitleCasePipe } from './pipes/rkmtitlecase.pipe';
     LikesComponent,
     HomeComponent,
     TitleCasingComponent,
-    RkMTitleCasePipe
+    RkMTitleCasePipe,
+    Likes2Component
   ],
   imports: [
     BrowserModule,

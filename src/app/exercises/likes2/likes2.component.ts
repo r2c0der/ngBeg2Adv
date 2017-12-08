@@ -15,8 +15,7 @@ export class Likes2Component implements OnInit {
   }
 
   countLikes(){
-     this.isLiked = !this.isLiked;
-     this.isLiked ? this.likes2Count++ : this.likes2Count--;
+
 
   }
 

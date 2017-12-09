@@ -4,7 +4,7 @@
     <div class=" col-lg-5 col-md-5 col-sm-6">
       <div class="panel">
         <div class="panel-heading">
-          <h2 class="panel-title">Postable Notes</h2>
+          <h2 class=" rkm_title">Postable Notes</h2>
           <div class="panel-body">
             <div class="input-group input-group-lg">
               <span class="input-group-addon" id="basic-addon1">#</span>
@@ -23,7 +23,8 @@
         </div>
       </div> <!-- .\ PANEL -->
       <div>
-        <rkm-likes2></rkm-likes2>
+        <rkm-likes2 [isLiked]="post.isLiked"
+                    [likes2TotalCount]="post.postLikeCount" ></rkm-likes2>
       </div>
     </div> <!--  COL -->
  <div class="col-lg-5 col-md-5 col-sm-6">

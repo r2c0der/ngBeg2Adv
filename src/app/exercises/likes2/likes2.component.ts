@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'rkm-likes2',
@@ -7,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Likes2Component implements OnInit {
 
-  isLiked: boolean = false;
-  likes2Count: number = 0;
+ @Input('isLiked') isLiked: boolean;
+ @Input('likes2TotalCount') likes2TotalCount: number;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  countLikes(){
+  postState(){
+    this.isLiked = !this.isLiked;
+    this.isLiked ? this.likes2TotalCount++ : this.likes2TotalCount--;
 
 
   }
+
 
 }

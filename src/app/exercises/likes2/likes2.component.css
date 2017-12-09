@@ -1,9 +1,12 @@
 .likes_heart{
-
+margin-left: 3em;
 }
-
 
 
 .likes_count {
 font-size: larger;
+}
+
+.isActive {
+
 }

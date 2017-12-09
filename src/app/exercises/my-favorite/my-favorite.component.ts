@@ -15,9 +15,11 @@ export class MyFavoriteComponent implements OnInit {
       isFavorite: false },
     {colorName: "orange",
       isFavorite: false},
-    {colorName: "yellow",
+    {colorName: "lightgrey",
       isFavorite: false},
     {colorName: "brown",
+      isFavorite: false},
+    {colorName: "salmon",
       isFavorite: false},
     {colorName: "hotpink",
       isFavorite: false},
@@ -26,6 +28,10 @@ export class MyFavoriteComponent implements OnInit {
     {colorName: "green",
       isFavorite: false},
     {colorName: "red",
+      isFavorite: false},
+    {colorName: "navy",
+      isFavorite: false},
+    {colorName: "lime",
       isFavorite: false}
 
 

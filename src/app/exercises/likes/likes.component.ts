@@ -31,7 +31,6 @@ post = {
   }
 
 
-
   updateLikes(count){
 
     this.setCount(count);

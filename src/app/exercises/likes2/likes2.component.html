@@ -1,7 +1,8 @@
 <div>
-<span class="likes_heart" (click)="countLikes()">
+  <h2 class="rkm_title">Reusable Components</h2>
+<span class="likes_heart" (click)="postState()">
   <i class="fa fa-heart fa-2x" aria-hidden="true" style="cursor: pointer;" [ngStyle]="{'color': isLiked? 'deeppink' : '#cccccc'}"></i>
 </span>
-  <span class="likes_count">{{likes2Count}}</span>
+  <span class="likes_count">{{likes2TotalCount}}</span>
 
 </div>

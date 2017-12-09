@@ -8,10 +8,10 @@
         {{color.colorName}}
 
         <span *ngIf="color.isFavorite; else notFavorite">
-      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" [style.color]="color.colorName" aria-hidden="true"></i>
         </span>
         <ng-template #notFavorite>
-          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star-o" [style.color]="color.colorName" aria-hidden="true"></i>
         </ng-template>
       </li>
     </ul>

@@ -17,10 +17,10 @@ import { HomeComponent } from './ui/home/home.component';
 import { TitleCasingComponent } from './exercises/title-casing/title-casing.component';
 import { RkMTitleCasePipe } from './pipes/rkmtitlecase.pipe';
 import { Likes2Component } from './exercises/likes2/likes2.component';
-
 import { FundamentalsComponent } from './exercises/fundamentals/fundamentals.component';
 import { ReusableComponentsComponent } from './exercises/reusable-components/reusable-components.component';
 import { PipesDirectivesComponent } from './exercises/pipes-directives/pipes-directives.component';
+
 import { ZippyDirective } from './directives/zippy/zippy.directive';
 import { ZippyComponent } from './exercises/zippy/zippy.component';
 
@@ -46,7 +46,6 @@ import { ZippyComponent } from './exercises/zippy/zippy.component';
     PipesDirectivesComponent,
     ZippyDirective,
     ZippyComponent,
-
 
   ],
   imports: [

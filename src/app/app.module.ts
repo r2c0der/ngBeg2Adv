@@ -18,6 +18,14 @@ import { TitleCasingComponent } from './exercises/title-casing/title-casing.comp
 import { RkMTitleCasePipe } from './pipes/rkmtitlecase.pipe';
 import { Likes2Component } from './exercises/likes2/likes2.component';
 
+import { FundamentalsComponent } from './exercises/fundamentals/fundamentals.component';
+import { ReusableComponentsComponent } from './exercises/reusable-components/reusable-components.component';
+import { PipesDirectivesComponent } from './exercises/pipes-directives/pipes-directives.component';
+import { ZippyDirective } from './directives/zippy/zippy.directive';
+import { ZippyComponent } from './exercises/zippy/zippy.component';
+
+
+
 
 
 @NgModule({
@@ -32,7 +40,14 @@ import { Likes2Component } from './exercises/likes2/likes2.component';
     HomeComponent,
     TitleCasingComponent,
     RkMTitleCasePipe,
-    Likes2Component
+    Likes2Component,
+    FundamentalsComponent,
+    ReusableComponentsComponent,
+    PipesDirectivesComponent,
+    ZippyDirective,
+    ZippyComponent,
+
+
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,5 @@
 <app-rkmb2a-navbar></app-rkmb2a-navbar>
 <div class="container-fluid ">
-  <div class="row">
-    <div class=" col-lg-5 col-md-5 col-sm-6">
       <div class="panel">
         <div class="panel-heading">
           <h2 class=" rkm_title">Postable Notes</h2>
@@ -23,13 +21,6 @@
         </div>
       </div> <!-- .\ PANEL -->
       <div>
-        <rkm-likes2 [isLiked]="post.isLiked"
-                    [likes2TotalCount]="post.postLikeCount" ></rkm-likes2>
+        <rkm-likes2 [isLiked]="post.isLiked" [likes2TotalCount]="post.postLikeCount" ></rkm-likes2>
       </div>
-    </div> <!--  COL -->
- <div class="col-lg-5 col-md-5 col-sm-6">
-   <rkm-my-favorite></rkm-my-favorite>
- </div>
-
-  </div> <!--  ROW -->
   </div> <!-- CONTAINER  -->

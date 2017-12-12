@@ -1,29 +1,25 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6 col-md-6">
+
 
       <form>
         <div class="form-group">
           <label for="firstName">First Name</label>
-          <input type="text"  id="firstName" class="form-control">
+          <input required type="text"  ngModel name="firstName" #firstName="ngModel" id="firstName" class="form-control">
+          <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First Name is required</div>
         </div>
         <div class="form-group">
           <label for="lastName">Last Name</label>
-          <input type="text"  id="lastName" class="form-control" />
+          <input required type="text"  id="lastName" class="form-control" ngModel #lastName="ngModel" name="lastName"/>
+          <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">Last Name is required</div>
         </div>
         <div class="form-group">
           <label for="email"> Email</label>
-          <input type="email" id="email" class="form-control">
+          <input type="email" id="email"  ngModel name="email" #email="ngModel" class="form-control">
         </div>
         <label for="comment">Comment </label>
         <div class="form-group">
-          <textarea id="comment" cols="75" rows="3"></textarea>
+          <textarea id="comment" cols="75" rows="3" name="comment" ngModel #comment="ngModel"></textarea>
 
         </div>
         <button class="btn btn-primary btn-lg">Submit</button>
       </form>
-
-    </div>
-  </div>
-</div>
 

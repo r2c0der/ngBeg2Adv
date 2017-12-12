@@ -1,0 +1,24 @@
+
+.zippy_container{
+ width: 99%;
+}
+
+.zippy_heading {
+  color: #dd0000;
+  font-family: 'Germania One', sans-serif;
+  font-size: 1.25em;
+  border: 2px solid #fcfcfc;
+  border-bottom: 3px solid #dd0000;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.expanded {
+  color: navy;
+}
+
+.zippy_body{
+  font-family: 'Open Sans', sans-serif;
+}
+

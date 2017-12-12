@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PipesDirectivesComponent  {
 
+  title: string = "Shipping Details";
+
   constructor() { }
 
 

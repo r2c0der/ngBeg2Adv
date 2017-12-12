@@ -1,8 +1,26 @@
 
 
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">{{title}}</div>
-    <div class="panel-body">{{content}}</div>
+<div class="container zippy_container">
+  <div class="panel panel-default" >
+    <div
+      class="panel-heading zippy_heading"
+       [class.expanded]="isExpanded"
+       (click)="onShowContent()">
+      {{title}}
+
+
+      <i class="fa"
+         [ngClass]="{
+       'fa-chevron-circle-up': isExpanded,
+       'fa-chevron-circle-down': !isExpanded
+       }"
+      aria-hidden="true" ></i>
+
+    </div>
+    <div class="panel-body zippy_body" *ngIf="isExpanded">
+    <ng-content ></ng-content>
+    </div>
   </div>
 </div>
+
+

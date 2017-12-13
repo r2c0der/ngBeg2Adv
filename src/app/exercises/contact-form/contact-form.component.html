@@ -4,22 +4,25 @@
         <div class="form-group">
           <label for="firstName">First Name</label>
           <input required type="text"  ngModel name="firstName" #firstName="ngModel" id="firstName" class="form-control">
-          <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First Name is required</div>
-        </div>
-        <div class="form-group">
+          <div class="alert alert-danger"
+               *ngIf="firstName.touched && !firstName.valid">
+            First Name is required</div>
+
+
           <label for="lastName">Last Name</label>
           <input required type="text"  id="lastName" class="form-control" ngModel #lastName="ngModel" name="lastName"/>
-          <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">Last Name is required</div>
-        </div>
-        <div class="form-group">
+          <div class="alert alert-danger"
+               *ngIf="lastName.touched && !lastName.valid">
+            Last Name is required</div>
+
+
           <label for="email"> Email</label>
           <input type="email" id="email"  ngModel name="email" #email="ngModel" class="form-control">
-        </div>
-        <label for="comment">Comment </label>
-        <div class="form-group">
-          <textarea id="comment" cols="75" rows="3" name="comment" ngModel #comment="ngModel"></textarea>
 
-        </div>
+        <label for="comment">Comment </label>
+          <textarea id="comment" cols="75" rows="3" name="comment" ngModel #comment="ngModel" class="form-control"></textarea>
+          <br />
         <button class="btn btn-primary btn-lg">Submit</button>
+        </div>
       </form>
 

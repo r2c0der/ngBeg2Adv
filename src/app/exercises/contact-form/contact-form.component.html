@@ -1,6 +1,6 @@
 
 
-      <form>
+      <form #templateForm="ngForm" (ngSubmit)="formSubmit(templateForm)">
         <div class="form-group">
           <label for="firstName">First Name</label>
           <input required type="text"  ngModel name="firstName" #firstName="ngModel" id="firstName" class="form-control">
@@ -22,7 +22,31 @@
         <label for="comment">Comment </label>
           <textarea id="comment" cols="75" rows="3" name="comment" ngModel #comment="ngModel" class="form-control"></textarea>
           <br />
-        <button class="btn btn-primary btn-lg">Submit</button>
+          <div class="form-group"><label for="contactMethod">Contact Preference</label>
+            <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+              <!--
+              TO BIND TO A COMPLEX OBJECT
+              <option *ngFor="let method of contactMethods" [ngValue]="method">
+                {{method.name}}
+              </option>-->
+              <option *ngFor="let method of contactMethods" [value]="method.id">
+                {{method.name}}
+              </option>
+            </select></div>
+          <div class="checkbox"> <input type="checkbox" ngModel name="isSubscribed"/> <label>Submit to mailing list</label></div>
+         <label> Best time to reach you:</label>
+          <div class="radio">
+            <label>
+            <input ngModel type="radio" name="contactOption" value="1"/>
+              AM
+          </label></div>
+          <div class="radio">
+            <label>
+              <input ngModel type="radio" name="contactOption" value="2"/>
+              PM
+            </label></div>
+          <p>{{templateForm.value | json }}</p>
+        <button class="btn btn-primary btn-lg" [disabled]="!templateForm.valid">Submit</button>
         </div>
       </form>
 

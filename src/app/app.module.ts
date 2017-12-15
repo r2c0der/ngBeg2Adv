@@ -25,6 +25,7 @@ import { ZippyDirective } from './directives/zippy/zippy.directive';
 import { ZippyComponent } from './exercises/zippy/zippy.component';
 import { FormsComponent } from './exercises/forms/forms.component';
 import { ContactFormComponent } from './exercises/contact-form/contact-form.component';
+import { CourseFormComponent } from './exercises/course-form/course-form.component';
 
 
 
@@ -50,6 +51,7 @@ import { ContactFormComponent } from './exercises/contact-form/contact-form.comp
     ZippyComponent,
     FormsComponent,
     ContactFormComponent,
+    CourseFormComponent,
 
   ],
   imports: [

@@ -26,6 +26,9 @@ import { ZippyComponent } from './exercises/zippy/zippy.component';
 import { FormsComponent } from './exercises/forms/forms.component';
 import { ContactFormComponent } from './exercises/contact-form/contact-form.component';
 import { CourseFormComponent } from './exercises/course-form/course-form.component';
+import { SignupFormComponent } from './exercises/signup-form/signup-form.component';
+import { TemplateDrivenComponent } from './exercises/forms/template-driven/template-driven.component';
+import { ReactiveComponent } from './exercises/forms/reactive/reactive.component';
 
 
 
@@ -52,6 +55,9 @@ import { CourseFormComponent } from './exercises/course-form/course-form.compone
     FormsComponent,
     ContactFormComponent,
     CourseFormComponent,
+    SignupFormComponent,
+    TemplateDrivenComponent,
+    ReactiveComponent,
 
   ],
   imports: [

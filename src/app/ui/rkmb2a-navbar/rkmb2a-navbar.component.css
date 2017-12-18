@@ -42,3 +42,7 @@
   color: white;
   padding-right: 1em;
 }
+
+.rkm_navbar_dropdown-item a {
+  color: #000000;
+}

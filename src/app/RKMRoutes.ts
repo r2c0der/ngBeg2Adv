@@ -7,6 +7,8 @@ import {FundamentalsComponent} from "./exercises/fundamentals/fundamentals.compo
 import {ReusableComponentsComponent} from "./exercises/reusable-components/reusable-components.component";
 import {PipesDirectivesComponent} from "./exercises/pipes-directives/pipes-directives.component";
 import {FormsComponent} from "./exercises/forms/forms.component";
+import {TemplateDrivenComponent} from "./exercises/forms/template-driven/template-driven.component";
+import {ReactiveComponent} from "./exercises/forms/reactive/reactive.component";
 
 
 export const rkmngRoutes: Routes = [
@@ -15,6 +17,8 @@ export const rkmngRoutes: Routes = [
   { path: 'basics', component: FundamentalsComponent },
   { path: 'pipdir', component: PipesDirectivesComponent },
   { path: 'forms', component: FormsComponent },
+  { path: 'template', component: TemplateDrivenComponent },
+  { path: 'reactive', component: ReactiveComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 
 ];

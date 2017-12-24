@@ -11,21 +11,21 @@ export class ChangePasswordComponent  {
 
   constructor() { }
 
-  passwordForm = new FormGroup({
-
+  passwordForm = new FormGroup(
+    {
       userAccount: new FormGroup({
-        oldpassword: new FormControl('', [
-          Validators.required
-        ]),
-        newpassword: new FormControl('',[
-          Validators.required
-        ]),
-        confirmpassword: new FormControl('', [
-          Validators.required
+          oldpassword: new FormControl('',
+            [Validators.required],
+            PasswordValidators.invalidPassword
+          ),
+          newpassword: new FormControl('', [
+            Validators.required
+          ]),
+          confirmpassword: new FormControl('', [
+            Validators.required
           ])
-
         })
-  });
+});
 
     get oldpassword(){
       return this.passwordForm.get('userAccount.oldpassword');
@@ -39,6 +39,18 @@ export class ChangePasswordComponent  {
       return this.passwordForm.get('userAccount.confirmpassword');
     }
 
+    changePassword(){
+      let isValid = this.passwordForm.value;
+
+      if(!isValid){
+        this.passwordForm.setErrors({
+          invalidLogin: true,
+        });
+        console.log("Form is ", isValid);
+
+      }
+
+    }
 
 
 

@@ -1,21 +1,37 @@
 import {AbstractControl, ValidationErrors} from "@angular/forms";
-import set = Reflect.set;
+
 
 
 export class PasswordValidators {
 
-  static passwordIsUnique(control: AbstractControl): Promise<ValidationErrors | null> {
+  static invalidPassword(control: AbstractControl): Promise<ValidationErrors | null> {
+    return new Promise((resolve )=> {
+      setTimeout(() => {
+        if(control.value !== 'rkmPass'){
+          resolve({invalidPassword: true});
+        } else {
+          resolve(null);
+        }
 
+      }, 2000);
+    });
+  }
 
-    setTimeout(() => {
-      if(control.value === 'rkmPass')
-        return {passwordIsUnique: true};
-      return null;
+  static passwordsMatch(control: AbstractControl): Promise<ValidationErrors | null>{
+     let newPass = control.get('userAccount.newpassword');
+     let confirmPass = control.get('userAccount.confirmpassword');
 
-    }, 2000);
+     console.log("NewPass ", newPass.value);
+    console.log("ConfirmPass ", confirmPass.value);
 
-    return null;
+     return new Promise((resolve) => {
+       setTimeout(() => {
+         if(newPass.value !== confirmPass.value)
+           resolve({passwordsMatch: true});
+           resolve(null);
 
+       }, 2000)
+     });
   }
 
 }

@@ -30,6 +30,7 @@ import { SignupFormComponent } from './exercises/signup-form/signup-form.compone
 import { TemplateDrivenComponent } from './exercises/forms/template-driven/template-driven.component';
 import { ReactiveComponent } from './exercises/forms/reactive/reactive.component';
 import {NewCourseFormComponent} from './exercises/forms/newcourseform/newcourseform.component';
+import { ChangePasswordComponent } from './exercises/changepassword/changepassword.component';
 
 
 
@@ -60,6 +61,7 @@ import {NewCourseFormComponent} from './exercises/forms/newcourseform/newcoursef
     TemplateDrivenComponent,
     ReactiveComponent,
     NewCourseFormComponent,
+    ChangePasswordComponent,
 
   ],
   imports: [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { UsernameValidators} from "../forms/username.validators";
 
@@ -7,7 +7,7 @@ import { UsernameValidators} from "../forms/username.validators";
   templateUrl: './signup-form.component.html',
   styleUrls: ['./signup-form.component.css']
 })
-export class SignupFormComponent implements OnInit {
+export class SignupFormComponent  {
 
   form = new FormGroup({
 
@@ -42,7 +42,6 @@ export class SignupFormComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }

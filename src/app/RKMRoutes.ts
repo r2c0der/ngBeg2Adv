@@ -9,6 +9,7 @@ import {PipesDirectivesComponent} from "./exercises/pipes-directives/pipes-direc
 import {FormsComponent} from "./exercises/forms/forms.component";
 import {TemplateDrivenComponent} from "./exercises/forms/template-driven/template-driven.component";
 import {ReactiveComponent} from "./exercises/forms/reactive/reactive.component";
+import {HTTPExercisesComponent} from "./http-exercises/httpexercises/httpexercises.component";
 
 
 export const rkmngRoutes: Routes = [
@@ -19,6 +20,7 @@ export const rkmngRoutes: Routes = [
   { path: 'forms', component: FormsComponent },
   { path: 'template', component: TemplateDrivenComponent },
   { path: 'reactive', component: ReactiveComponent },
+  { path: 'http', component: HTTPExercisesComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 
 ];

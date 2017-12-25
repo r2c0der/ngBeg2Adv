@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule} from "@angular/router";
+import { HttpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
 import { RKMB2AIndexComponent } from './rkmb2a-index/rkmb2a-index.component';
@@ -31,6 +32,9 @@ import { TemplateDrivenComponent } from './exercises/forms/template-driven/templ
 import { ReactiveComponent } from './exercises/forms/reactive/reactive.component';
 import {NewCourseFormComponent} from './exercises/forms/newcourseform/newcourseform.component';
 import { ChangePasswordComponent } from './exercises/changepassword/changepassword.component';
+import { JSONPlaceholderPostsComponent } from './http-exercises/jsonplaceholder-posts/jsonplaceholder-posts.component';
+import { HTTPExercisesComponent } from './http-exercises/httpexercises/httpexercises.component';
+
 
 
 
@@ -62,12 +66,15 @@ import { ChangePasswordComponent } from './exercises/changepassword/changepasswo
     ReactiveComponent,
     NewCourseFormComponent,
     ChangePasswordComponent,
+    JSONPlaceholderPostsComponent,
+    HTTPExercisesComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     RouterModule.forRoot(rkmngRoutes, { enableTracing: false})
   ],
   providers: [

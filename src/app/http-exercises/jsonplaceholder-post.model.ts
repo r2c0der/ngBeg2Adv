@@ -6,4 +6,5 @@ export interface JSONPlaceholderPostModel{
   id: number;
   title: string;
   body: string;
+  isRead: boolean;
 }

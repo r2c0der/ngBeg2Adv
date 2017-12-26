@@ -34,6 +34,7 @@ import {NewCourseFormComponent} from './exercises/forms/newcourseform/newcoursef
 import { ChangePasswordComponent } from './exercises/changepassword/changepassword.component';
 import { JSONPlaceholderPostsComponent } from './http-exercises/jsonplaceholder-posts/jsonplaceholder-posts.component';
 import { HTTPExercisesComponent } from './http-exercises/httpexercises/httpexercises.component';
+import { JSONPlaceholderUpdatedPostsComponent } from './http-exercises/jsonplaceholder-updated-posts/jsonplaceholder-updated-posts.component';
 
 
 
@@ -68,6 +69,7 @@ import { HTTPExercisesComponent } from './http-exercises/httpexercises/httpexerc
     ChangePasswordComponent,
     JSONPlaceholderPostsComponent,
     HTTPExercisesComponent,
+    JSONPlaceholderUpdatedPostsComponent,
 
   ],
   imports: [

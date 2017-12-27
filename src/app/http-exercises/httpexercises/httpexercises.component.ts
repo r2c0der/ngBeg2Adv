@@ -5,9 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './httpexercises.component.html',
   styles: [
     `
-      .title{
-        font-family: 'Risque', cursive;
+
+      .title_original{
+        font-family: 'Berkshire Swash', sans-serif;
+        color: navy;
+
       }
+
+      .title_modified {
+        font-family: "Encode Sans Expanded", cursive;
+        color: darkred;
+
+      }
+
     `
   ]
 })

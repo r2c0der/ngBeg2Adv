@@ -35,6 +35,7 @@ import { ChangePasswordComponent } from './exercises/changepassword/changepasswo
 import { JSONPlaceholderPostsComponent } from './http-exercises/jsonplaceholder-posts/jsonplaceholder-posts.component';
 import { HTTPExercisesComponent } from './http-exercises/httpexercises/httpexercises.component';
 import { JSONPlaceholderUpdatedPostsComponent } from './http-exercises/jsonplaceholder-updated-posts/jsonplaceholder-updated-posts.component';
+import {PostService} from "./services/post.service";
 
 
 
@@ -81,7 +82,8 @@ import { JSONPlaceholderUpdatedPostsComponent } from './http-exercises/jsonplace
   ],
   providers: [
     CoursesService,
-    AuthorsService
+    AuthorsService,
+    PostService
   ],
   bootstrap: [RKMB2AIndexComponent]
 })

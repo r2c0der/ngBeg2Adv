@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {JSONPlaceholderPostModel} from "../jsonplaceholder-post.model";
-import {Http} from "@angular/http";
+import { JSONPlaceholderPostModel } from "../jsonplaceholder-post.model";
+import { PostService } from "../../services/post.service";
 
 @Component({
   selector: 'rkm-jsonplaceholder-updated-posts',
@@ -10,12 +10,11 @@ import {Http} from "@angular/http";
 export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
 
   posts: JSONPlaceholderPostModel[];
-  private JSONPUrl = "http://jsonplaceholder.typicode.com/posts"
 
-  constructor(private _http: Http) { }
+  constructor(private _postService: PostService) { }
 
   ngOnInit() {
-    this._http.get(this.JSONPUrl)
+    this._postService.getPosts()
       .subscribe(response => {
         this.posts = response.json();
       });

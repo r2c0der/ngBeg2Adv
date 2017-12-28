@@ -19,7 +19,11 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
     this._postService.getAllPosts()
       .subscribe(response => {
         this.posts = response.json();
-      });
+      },
+        error => {
+          alert('An unexpected error has occurred');
+          console.log(error);
+        });
 
   }
 
@@ -38,7 +42,11 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
 
      console.log(newPost);
       this.posts.splice(0, 0, postObj);
-      });
+      },
+        error => {
+        alert('An unexpected error has occured');
+        console.log(error);
+        });
   }
 
   updatePost(postObj){
@@ -46,7 +54,12 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
    this._postService.updatePost(postObj)
       .subscribe(updatedPost => {
         console.log(updatedPost.json());
-      });
+      },
+        error => {
+        alert('An unexpected error has occurred');
+        console.log(error);
+
+        });
 
   }
 
@@ -57,7 +70,11 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
       .subscribe(response => {
         let index = this.posts.indexOf(postObj);
         this.posts.splice(index, 1);
-      });
+      },
+        error=>{
+          alert('An unexpected error has occurred');
+          console.log(error);
+        });
 
 
   }

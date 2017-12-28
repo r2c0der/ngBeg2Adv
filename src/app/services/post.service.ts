@@ -7,8 +7,20 @@ export class PostService {
 
   constructor(private _http: Http) { }
 
-  getPosts(){
+  getAllPosts(){
    return this._http.get(this.jsonPURL);
+  }
+
+  createPost(postObj){
+   return this._http.post(this.jsonPURL, JSON.stringify(postObj));
+  }
+
+  updatePost(postObj){
+    return this._http.patch(this.jsonPURL +'/' + postObj.id , JSON.stringify({isRead: true}));
+  }
+
+  deletePost(id){
+   return this._http.delete(this.jsonPURL +'/' + id );
   }
 
 }

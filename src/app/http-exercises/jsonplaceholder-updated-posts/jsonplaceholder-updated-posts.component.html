@@ -1,10 +1,14 @@
 
-<div *ngFor="let post of posts">
-  <div class="post_heading"><span class="post_id">Post ID: {{post.id}}</span><span class="post_title">{{post.title}}</span></div>
-  <div class="post_body"><i class="fa fa-paw" aria-hidden="true"></i> {{post.body}}</div>
-<!--  <button class="btn-default btn-sm"
-          (click)="updatePost(post)">Update Post</button>
+<input
+  (keyup.enter)="createPost(postTitle)" #postTitle
+  type="text" placeholder="Create Post" class="form-control" />
+<br />
+<div *ngFor="let blogpost of posts">
+  <div class="post_heading"><span class="post_id">Post ID: {{blogpost.id}}</span><span class="post_title">{{blogpost.title}}</span></div>
+  <div class="post_body"><i class="fa fa-paw" aria-hidden="true"></i> {{blogpost.body}}</div>
+ <button class="btn-default btn-sm"
+          (click)="updatePost(blogpost)">Update Post</button>
   <button class="btn btn-default btn-sm"
-          (click)="deletePost(post)">Delete Post </button>-->
+          (click)="deletePost(blogpost)">Delete Post </button>
   <hr />
 </div>

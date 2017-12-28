@@ -54,7 +54,7 @@ export class JSONPlaceholderPostsComponent implements OnInit {
   deletePost(postObj){
     this._http.delete(this.jsonPURL +'/' + postObj.id )
       .subscribe(response => {
-        let index = this.posts.indexOf(postObj);
+        let index = this.posts.indexOf(response);
         console.log(index);
         console.log(postObj[index])
          this.posts.splice(index, 1);

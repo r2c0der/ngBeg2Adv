@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { JSONPlaceholderPostModel } from "../jsonplaceholder-post.model";
 import { PostService } from "../../services/post.service";
-import {post} from "selenium-webdriver/http";
+
 
 @Component({
   selector: 'rkm-jsonplaceholder-updated-posts',
@@ -43,9 +42,15 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
      console.log(newPost);
       this.posts.splice(0, 0, postObj);
       },
-        error => {
-        alert('An unexpected error has occured');
-        console.log(error);
+        (error: Response) => {
+        if(error.status === 400){
+          alert('Server error');
+
+        } else {
+          alert('An unexpected error has occured');
+          console.log(error);
+        }
+
         });
   }
 
@@ -71,8 +76,13 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
         let index = this.posts.indexOf(postObj);
         this.posts.splice(index, 1);
       },
-        error=>{
-          alert('An unexpected error has occurred');
+        (error: Response) => {
+          if(error.status === 404){
+            alert('This post was not found. It may have been deleted.');
+          } else {
+            alert('An unexpected error has occurred');
+          }
+
           console.log(error);
         });
 

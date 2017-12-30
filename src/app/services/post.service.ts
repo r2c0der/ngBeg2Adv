@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Http} from "@angular/http";
+import { Observable } from "rxjs/Observable";
+import 'rxjs/add/operator/catch';
+import {AppError} from "../http-exercises/common/app.error";
 
 @Injectable()
 export class PostService {
@@ -19,8 +22,12 @@ export class PostService {
     return this._http.patch(this.jsonPURL +'/' + postObj.id , JSON.stringify({isRead: true}));
   }
 
-  deletePost(id){
-   return this._http.delete(this.jsonPURL +'/' + id );
+  deletePost(id:number){
+   return this._http.delete(this.jsonPURL +'/' + id )
+     .catch((error: Response) => {
+       return Observable.throw(new AppError(error))
+
+     });
   }
 
 }

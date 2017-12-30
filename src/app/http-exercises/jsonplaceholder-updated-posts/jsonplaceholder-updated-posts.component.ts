@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from "../../services/post.service";
+import {NotFoundError} from "../common/not-found-error";
+import {AppError} from "../common/app.error";
+import {BadRequestError} from "../common/bad-request-error";
 
 
 @Component({
@@ -38,16 +41,16 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
       .subscribe(newPost => {
 
      postObj['id'] = newPost.json().id;
-
      console.log(newPost);
       this.posts.splice(0, 0, postObj);
       },
-        (error: Response) => {
-        if(error.status === 400){
-          alert('Server error');
+        (error: AppError) => {
+        if(error instanceof BadRequestError){
+          //this.<form>.setErrors(errors.json());
+          alert('Bad Request made to the server');
 
         } else {
-          alert('An unexpected error has occured');
+           alert('An unexpected error has occured');
           console.log(error);
         }
 
@@ -65,7 +68,6 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
         console.log(error);
 
         });
-
   }
 
   deletePost(postObj){
@@ -76,14 +78,13 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
         let index = this.posts.indexOf(postObj);
         this.posts.splice(index, 1);
       },
-        (error: Response) => {
-          if(error.status === 404){
+        (error: AppError) => {
+          if(error instanceof NotFoundError){
             alert('This post was not found. It may have been deleted.');
           } else {
             alert('An unexpected error has occurred');
+            console.log(error);
           }
-
-          console.log(error);
         });
 
 

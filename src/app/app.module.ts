@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {ErrorHandler, NgModule} from '@angular/core';
 import { RouterModule} from "@angular/router";
 import { HttpModule } from "@angular/http";
 
@@ -36,6 +36,7 @@ import { JSONPlaceholderPostsComponent } from './http-exercises/jsonplaceholder-
 import { HTTPExercisesComponent } from './http-exercises/httpexercises/httpexercises.component';
 import { JSONPlaceholderUpdatedPostsComponent } from './http-exercises/jsonplaceholder-updated-posts/jsonplaceholder-updated-posts.component';
 import {PostService} from "./services/post.service";
+import {AppErrorHandler} from "./http-exercises/common/app-error-handler";
 
 
 
@@ -83,7 +84,8 @@ import {PostService} from "./services/post.service";
   providers: [
     CoursesService,
     AuthorsService,
-    PostService
+    PostService,
+    { provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [RKMB2AIndexComponent]
 })

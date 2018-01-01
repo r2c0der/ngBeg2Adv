@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from "../../services/post.service";
-import {NotFoundError} from "../common/not-found-error";
-import {AppError} from "../common/app.error";
-import {BadRequestError} from "../common/bad-request-error";
+import  {NotFoundError } from "../common/not-found-error";
+import { AppError } from "../common/app.error";
+import { BadInputError } from "../common/bad-input-error";
 
 
 @Component({
@@ -45,14 +45,9 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
       this.posts.splice(0, 0, postObj);
       },
         (error: AppError) => {
-        if(error instanceof BadRequestError){
-          //this.<form>.setErrors(errors.json());
-          alert('Bad Request made to the server');
-
-        } else {
-           alert('An unexpected error has occured');
-          console.log(error);
-        }
+        if(error instanceof BadInputError){
+          //this.<form>.setErrors(error._originalError.json());
+        } else throw error;
 
         });
   }
@@ -60,35 +55,31 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
   updatePost(postObj){
     console.log("Update post: ", postObj.id);
    this._postService.updatePost(postObj)
-      .subscribe(updatedPost => {
+      .subscribe(
+        updatedPost => {
         console.log(updatedPost.json());
-      },
-        error => {
-        alert('An unexpected error has occurred');
-        console.log(error);
-
         });
   }
 
-  deletePost(postObj){
+  // deletePost(postObj){
 
-    console.log("delete post: ", postObj.id);
-  this._postService.deletePost(postObj.id)
+  deletePost(postObj){
+    console.log("delete post: ", postObj);
+  // this._postService.deletePost(postObj.id)
+    this._postService.deletePost(postObj)
       .subscribe(response => {
         let index = this.posts.indexOf(postObj);
         this.posts.splice(index, 1);
       },
         (error: AppError) => {
-          if(error instanceof NotFoundError){
+          if (error instanceof NotFoundError)
             alert('This post was not found. It may have been deleted.');
-          } else {
-            alert('An unexpected error has occurred');
-            console.log(error);
-          }
+          else throw error;
+
         });
 
-
   }
+
 
 
 }

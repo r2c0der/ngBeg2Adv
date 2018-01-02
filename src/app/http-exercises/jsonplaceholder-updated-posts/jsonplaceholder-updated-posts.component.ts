@@ -18,7 +18,7 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
   constructor(private _postService: PostService) { }
 
   ngOnInit() {
-    this._postService.getAllPosts()
+    this._postService.getAll()
       .subscribe(response => {
         this.posts = response.json();
       },
@@ -37,7 +37,7 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
     }
     postTitle.value = '';
 
-    this._postService.createPost(postObj)
+    this._postService.create(postObj)
       .subscribe(newPost => {
 
      postObj['id'] = newPost.json().id;
@@ -54,7 +54,7 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
 
   updatePost(postObj){
     console.log("Update post: ", postObj.id);
-   this._postService.updatePost(postObj)
+   this._postService.update(postObj)
       .subscribe(
         updatedPost => {
         console.log(updatedPost.json());
@@ -66,7 +66,7 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
   deletePost(postObj){
     console.log("delete post: ", postObj);
   // this._postService.deletePost(postObj.id)
-    this._postService.deletePost(postObj)
+    this._postService.delete(postObj)
       .subscribe(response => {
         let index = this.posts.indexOf(postObj);
         this.posts.splice(index, 1);

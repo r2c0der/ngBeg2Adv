@@ -12,25 +12,25 @@ import {AppError} from "./app.error";
 export class DataService {
 
 
-  constructor(private jsonPURL, private _http: Http) { }
+  constructor(private url:string, private _http: Http) { }
 
   getAll(){
-    return this._http.get(this.jsonPURL)
+    return this._http.get(this.url)
       .catch(this.handleError);
   }
 
   create(resource){
-    return this._http.post(this.jsonPURL, JSON.stringify(resource))
+    return this._http.post(this.url, JSON.stringify(resource))
       .catch(this.handleError);
   }
 
   update(resource){
-    return this._http.patch(this.jsonPURL +'/' + resource.id , JSON.stringify({isRead: true}))
+    return this._http.patch(this.url +'/' + resource.id , JSON.stringify({isRead: true}))
       .catch(this.handleError);
   }
 
   delete(id:number){
-    return this._http.delete(this.jsonPURL +'/' + id )
+    return this._http.delete(this.url +'/' + id )
       .catch(this.handleError);
   }
 

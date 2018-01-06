@@ -33,17 +33,18 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
   {
     let postObj = {title: input.value };
     input.value = "";
+    this.posts.splice(0, 0, postObj);
 
 
     this._postService.create(postObj)
       .subscribe(newPost =>
       {
        postObj['id'] = newPost.id;
-        this.posts.splice(0, 0, postObj)
-
-      },
+       },
 
         (error: AppError) => {
+          this.posts.splice(0, 1);
+          
         if(error instanceof BadInputError){
           //this.<form>.setErrors(error._originalError.json());
         } else throw error;

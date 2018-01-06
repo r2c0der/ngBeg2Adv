@@ -19,9 +19,9 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
 
   ngOnInit() {
     this._postService.getAll()
-      .subscribe(response => {
-        this.posts = response.json();
-      },
+      .subscribe(
+        posts => this.posts = posts,
+
         error => {
           alert('An unexpected error has occurred');
           console.log(error);
@@ -29,21 +29,20 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
 
   }
 
-  createPost(postTitle: HTMLInputElement)
+  createPost(input: HTMLInputElement)
   {
-    let postObj = {
-      title: postTitle.value,
-      id: postTitle.id
-    }
-    postTitle.value = '';
+    let postObj = {title: input.value };
+    input.value = "";
+
 
     this._postService.create(postObj)
-      .subscribe(newPost => {
+      .subscribe(newPost =>
+      {
+       postObj['id'] = newPost.id;
+        this.posts.splice(0, 0, postObj)
 
-     postObj['id'] = newPost.json().id;
-     console.log(newPost);
-      this.posts.splice(0, 0, postObj);
       },
+
         (error: AppError) => {
         if(error instanceof BadInputError){
           //this.<form>.setErrors(error._originalError.json());
@@ -67,7 +66,7 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
     console.log("delete post: ", postObj);
   // this._postService.deletePost(postObj.id)
     this._postService.delete(postObj)
-      .subscribe(response => {
+      .subscribe(() => {
         let index = this.posts.indexOf(postObj);
         this.posts.splice(index, 1);
       },

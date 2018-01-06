@@ -44,7 +44,7 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
 
         (error: AppError) => {
           this.posts.splice(0, 1);
-          
+
         if(error instanceof BadInputError){
           //this.<form>.setErrors(error._originalError.json());
         } else throw error;
@@ -64,14 +64,15 @@ export class JSONPlaceholderUpdatedPostsComponent implements OnInit {
   // deletePost(postObj){
 
   deletePost(postObj){
-    console.log("delete post: ", postObj);
+
+    let index = this.posts.indexOf(postObj);
+    this.posts.splice(index, 1);
   // this._postService.deletePost(postObj.id)
     this._postService.delete(postObj)
-      .subscribe(() => {
-        let index = this.posts.indexOf(postObj);
-        this.posts.splice(index, 1);
-      },
+      .subscribe(() => null,
         (error: AppError) => {
+          this.posts.splice(index, 0, postObj);
+
           if (error instanceof NotFoundError)
             alert('This post was not found. It may have been deleted.');
           else throw error;

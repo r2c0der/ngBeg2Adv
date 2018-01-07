@@ -10,6 +10,7 @@ import {FormsComponent} from "./exercises/forms/forms.component";
 import {TemplateDrivenComponent} from "./exercises/forms/template-driven/template-driven.component";
 import {ReactiveComponent} from "./exercises/forms/reactive/reactive.component";
 import {HTTPExercisesComponent} from "./http-exercises/httpexercises/httpexercises.component";
+import {GithubFollowersComponent} from "./http-exercises/github-followers/github-followers.component";
 
 
 export const rkmngRoutes: Routes = [
@@ -21,6 +22,7 @@ export const rkmngRoutes: Routes = [
   { path: 'template', component: TemplateDrivenComponent },
   { path: 'reactive', component: ReactiveComponent },
   { path: 'http', component: HTTPExercisesComponent },
+  { path: 'followers', component: GithubFollowersComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 
 ];

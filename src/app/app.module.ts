@@ -37,6 +37,8 @@ import { HTTPExercisesComponent } from './http-exercises/httpexercises/httpexerc
 import { JSONPlaceholderUpdatedPostsComponent } from './http-exercises/jsonplaceholder-updated-posts/jsonplaceholder-updated-posts.component';
 import {PostService} from "./services/post.service";
 import {AppErrorHandler} from "./http-exercises/common/app-error-handler";
+import { GithubFollowersComponent } from './http-exercises/github-followers/github-followers.component';
+import {GithubService} from "./services/github.service";
 
 
 
@@ -72,6 +74,7 @@ import {AppErrorHandler} from "./http-exercises/common/app-error-handler";
     JSONPlaceholderPostsComponent,
     HTTPExercisesComponent,
     JSONPlaceholderUpdatedPostsComponent,
+    GithubFollowersComponent,
 
   ],
   imports: [
@@ -85,6 +88,7 @@ import {AppErrorHandler} from "./http-exercises/common/app-error-handler";
     CoursesService,
     AuthorsService,
     PostService,
+    GithubService,
     { provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [RKMB2AIndexComponent]

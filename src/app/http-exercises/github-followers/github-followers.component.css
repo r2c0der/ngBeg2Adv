@@ -1,0 +1,17 @@
+h1{
+  font-family: 'Cairo', sans-serif;
+  color: navy;
+}
+
+.rkm_github_avatar-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.rkm_github_follower-header{
+  color: firebrick;
+  font-size: 1.75em;
+  font-weight: bold;
+  font-family: 'Saira', sans-serif;
+}

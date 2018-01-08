@@ -10,32 +10,37 @@
 
 
       <div class="col-md-6  rkm_navbar_link" >
-        <a routerLink="/home" style="cursor:pointer;" routerLinkActive="active" >Home</a>
-        <a routerLink="/basics" routerLinkActive="active"  style="cursor:pointer;">Ng Basics</a>
-        <a routerLink="/components" routerLinkActive="active"  style="cursor:pointer;">Components</a>
+        <a routerLink="/home" style="cursor:pointer;" routerLinkActive="active current" >Home</a>
+        <a routerLink="/basics" routerLinkActive="active current"  style="cursor:pointer;">Ng Basics</a>
+        <a routerLink="/components" routerLinkActive="active "  style="cursor:pointer;">Components</a>
         <span class="dropdown">
-           <a routerLink="/http" routerLinkActive="active"  style="cursor:pointer;" data-toggle="dropdown" class="dropdown-toggle">
+           <a routerLink="/http" routerLinkActive="active "  style="cursor:pointer;" data-toggle="dropdown" class="dropdown-toggle">
              <i class="fa fa-caret-down" aria-hidden="true"></i>HttpRequests</a>
           <ul class="dropdown-menu">
-              <li class="rkm_navbar-dropdown-item"><a routerLink="/followers" routerLinkActive="active"  style="cursor:pointer;">Github Assignment</a></li>
+              <li class="rkm_navbar-dropdown-item"><a routerLink="/followers" routerLinkActive="active "  style="cursor:pointer;">Github Assignment</a></li>
               </ul>
         </span>
 
 
         <span class="dropdown">
-          <a routerLink="/forms" routerLinkActive="active"  style="cursor:pointer;" data-toggle="dropdown" class="dropdown-toggle" >
+          <a routerLink="/forms" routerLinkActive="active "  style="cursor:pointer;" data-toggle="dropdown" class="dropdown-toggle" >
             <i class="fa fa-caret-down" aria-hidden="true"></i>
             Forms
           </a>
 
           <ul class="dropdown-menu ">
-            <li class="rkm_navbar_dropdown-item">
-              <a routerLink="/template" routerLinkActive="active"  style="cursor:pointer;">Template Driven</a></li>
-            <li class="rkm_navbar_dropdown-item"> <a routerLink="/reactive" routerLinkActive="active"  style="cursor:pointer;">Reactive </a></li>
+            <li class="rkm_navbar_dropdown-item" routerLinkActive="active current">
+              <a routerLink="/template"   style="cursor:pointer;">Template Driven</a></li>
+            <li class="rkm_navbar_dropdown-item" routerLinkActive="active current"> <a routerLink="/reactive" routerLinkActive="active "  style="cursor:pointer;">Reactive </a></li>
           </ul>
 
         </span>
-        <a routerLink="/pipdir" routerLinkActive="active"  style="cursor:pointer;">Pipes & Directives</a>
+        <a routerLink="/pipdir" routerLinkActive="active "  style="cursor:pointer;">Pipes & Directives</a>
+        <a routerLink="/githome" routerLinkActive="active "  style="cursor:pointer;">Routes | Home</a>
+        <a routerLink="/followers" routerLinkActive="active "  style="cursor:pointer;">Followers</a>
+        <a routerLink="/http" routerLinkActive="active "  style="cursor:pointer;">Posts</a>
+
+
       </div>
     </div> <!-- row -->
   </div> <!-- container fluid -->

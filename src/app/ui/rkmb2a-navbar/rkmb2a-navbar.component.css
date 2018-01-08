@@ -47,5 +47,11 @@
   font-size: 1.4em;
   color: white;
   padding-right: 1em;
+  text-decoration: none;
+}
+
+.rkm_navbar_link a:hover{
+  color: deeppink;
+  text-decoration: none;
 }
 

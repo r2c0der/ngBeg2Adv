@@ -39,6 +39,9 @@ import {PostService} from "./services/post.service";
 import {AppErrorHandler} from "./http-exercises/common/app-error-handler";
 import { GithubFollowersComponent } from './http-exercises/github-followers/github-followers.component';
 import {GithubService} from "./services/github.service";
+import { GithubHomeComponent } from './routes-exercises/github-home/github-home.component';
+import { GithubProfileComponent } from './routes-exercises/github-profile/github-profile.component';
+import { GithubNotfoundComponent } from './routes-exercises/github-notfound/github-notfound.component';
 
 
 
@@ -75,6 +78,9 @@ import {GithubService} from "./services/github.service";
     HTTPExercisesComponent,
     JSONPlaceholderUpdatedPostsComponent,
     GithubFollowersComponent,
+    GithubHomeComponent,
+    GithubProfileComponent,
+    GithubNotfoundComponent,
 
   ],
   imports: [

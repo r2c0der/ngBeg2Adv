@@ -9,7 +9,7 @@ h1{
   border-radius: 100%;
 }
 
-.rkm_github_follower-header{
+.rkm_github_follower-header a{
   color: firebrick;
   font-size: 1.75em;
   font-weight: bold;

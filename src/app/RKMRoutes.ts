@@ -11,6 +11,9 @@ import {TemplateDrivenComponent} from "./exercises/forms/template-driven/templat
 import {ReactiveComponent} from "./exercises/forms/reactive/reactive.component";
 import {HTTPExercisesComponent} from "./http-exercises/httpexercises/httpexercises.component";
 import {GithubFollowersComponent} from "./http-exercises/github-followers/github-followers.component";
+import {GithubProfileComponent} from "./routes-exercises/github-profile/github-profile.component";
+import {GithubHomeComponent} from "./routes-exercises/github-home/github-home.component";
+import {GithubNotfoundComponent} from "./routes-exercises/github-notfound/github-notfound.component";
 
 
 export const rkmngRoutes: Routes = [
@@ -22,7 +25,11 @@ export const rkmngRoutes: Routes = [
   { path: 'template', component: TemplateDrivenComponent },
   { path: 'reactive', component: ReactiveComponent },
   { path: 'http', component: HTTPExercisesComponent },
+  { path: 'githome', component: GithubHomeComponent },
+  { path: 'followers/:id', component: GithubProfileComponent },
   { path: 'followers', component: GithubFollowersComponent },
+  { path: 'posts', component: HTTPExercisesComponent },
+  { path: 'notfound', component: GithubNotfoundComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 
 ];

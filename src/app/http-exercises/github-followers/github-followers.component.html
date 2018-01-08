@@ -10,8 +10,8 @@
     </div>
     <div class="media-body">
       <h4 class="media-heading rkm_github_follower-header">
-        {{githubFollower.login}}</h4>
-      <a >{{githubFollower.html_url}}</a>
+        <a [routerLink]="['/followers', githubFollower.login]">{{githubFollower.login}} </a> </h4>
+      <a href="githubFollower.html_url">{{githubFollower.html_url}}</a>
     </div>
 
   </div>
